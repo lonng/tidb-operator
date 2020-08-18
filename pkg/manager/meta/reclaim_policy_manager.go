@@ -87,7 +87,6 @@ func (rpm *reclaimPolicyManager) sync(obj runtime.Object, isPVReclaimEnabled boo
 		selector     labels.Selector
 		err          error
 	)
-
 	switch kind {
 	case v1alpha1.TiDBClusterKind:
 		selector, err = label.New().Instance(instanceName).Selector()
